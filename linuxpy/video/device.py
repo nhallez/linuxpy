@@ -1108,6 +1108,10 @@ class Controls(dict):
         self._init_if_needed()
         return super().items()
 
+    def keys(self):
+        self._init_if_needed()
+        return super().keys()
+    
     def values(self):
         self._init_if_needed()
         return super().values()
