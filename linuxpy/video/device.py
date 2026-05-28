@@ -1104,6 +1104,10 @@ class Controls(dict):
                 return v
         raise KeyError(key)
 
+    def __contains__(self, key):
+        self._init_if_needed()
+        return super().__contains__(key)
+
     def items(self):
         self._init_if_needed()
         return super().items()
